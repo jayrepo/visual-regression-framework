@@ -19,8 +19,6 @@ async function getDiff (baseImage, newImage) {
     ignore: ['nothing', 'less', 'antialiasing', 'colors', 'alpha']
   }
 
-  // The parameters can be Node Buffers
-  // data is the same as usual with an additional getBuffer() function
   if (!await fs.exists(baseImage)) {
     await fs.copyFile(newImage, baseImage)
     return null

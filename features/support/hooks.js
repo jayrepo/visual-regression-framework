@@ -4,13 +4,13 @@ const puppeteer = require('puppeteer')
 const devices = require('puppeteer/DeviceDescriptors')
 const deviceName = process.env.EMU
 const match = deviceName && deviceName.match(/(\d{3,4})x(\d{3,4})/)
-const width = match && +match[1] + 16
+const width = match && +match[1]
 const height = match && +match[2]
 
 Before({timeout: 10 * 1000}, async function () {
   global.browser = await puppeteer.launch({
     executablePath: process.env.CHROME_BIN || 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-    headless: false
+    headless: true
     // args: [
     //   `--window-size=${width},${height}`
     // ]

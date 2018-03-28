@@ -7,7 +7,7 @@ Given('I go to {string}', {timeout: 60 * 1000}, async function (url) {
   await page.goto(url, {waitUntil: 'networkidle0'})
 })
 
-Given('I do some change', async function () {
+Given('I make some changes', async function () {
   await page.$$eval('.btn-outline-primary',
     btns => btns.map(b => { b.style.paddingLeft = '50px' }))
 })
