@@ -1,10 +1,9 @@
 {
-  "name": "visual-regression",
+  "name": "visual-regression-framework",
   "version": "1.0.0",
-  "description": "A visual regression tool",
+  "description": "A visual regression framework based on puppeteer and resemble",
   "main": "index.js",
   "author": "Jay Chen",
-  "license": "MIT",
   "private": false,
   "dependencies": {
     "cucumber": "^4.0.0",
@@ -13,7 +12,8 @@
     "resemblejs": "^2.10.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js"
+    "test": "./node_modules/.bin/cucumber-js",
+    "mtest": "node parallel.js"
   },
   "standard": {
     "globals": [

@@ -12,7 +12,7 @@ Given('I make some changes', async function () {
     btns => btns.map(b => { b.style.paddingLeft = '50px' }))
 })
 
-Then('I take screenshot of the page as {string}', async function (fileName) {
+Then('I take screenshot of the page as {string}', {timeout: 10 * 1000}, async function (fileName) {
   const name = fileName +
     (process.env.EMU ? '.' + process.env.EMU.replace(/ /g, '_') : '')
   const baseImage = `screenshots/base/${name}.png`
