@@ -27,7 +27,7 @@ Before({timeout: 10 * 1000}, async function () {
   })
   global.page = await browser.newPage()
   page.setDefaultNavigationTimeout(60000)
-  // device list: https://github.com/GoogleChrome/puppeteer/blob/master/DeviceDescriptors.
+  // device list: https://github.com/GoogleChrome/puppeteer/blob/master/DeviceDescriptors.js
   if (deviceName) {
     if (match) {
       await page.setViewport({width, height})
